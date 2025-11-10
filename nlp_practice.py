@@ -1,4 +1,5 @@
 import re
+import matplotlib.pyplot as plt
 from nltk.tokenize import word_tokenize, sent_tokenize, regexp_tokenize, TweetTokenizer
 
 scene_one = "SOLDIER #1: This is the fourth sentence."
@@ -47,6 +48,11 @@ germanText = "Wann gehen wir Pizza essen? 🍕 Und fährst du mit Über? 🚕"
 
 all_words = word_tokenize(germanText)
 
-capitalized_words = 
+capitalized_words = r"[A-ZÜ]\w+"
 
-print(all_words)
+emoji = "['\U0001F300-\U0001F5FF'|'\U0001F600-\U0001F64F'|'\U0001F680-\U0001F6FF'|'\u2600-\u26FF\u2700-\u27BF']"
+
+# print(regexp_tokenize(germanText ,emoji))
+
+plt.hist([1, 2, 3, 4, 5, 6, 7, 8, 9])
+# plt.show()
